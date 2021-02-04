@@ -12,5 +12,5 @@ export class AppComponent {
 
   /* having a userModel. We can consider instance like autofilled form when we want to change/edit
      the shipment details or address while buying something, Data that already appears "prefilled" in the form*/
-  userModel  = new User('Rob', 'rob@gmail.com', 5454544, 'Vue', 'morning', true);
+  userModel  = new User('', 'rob@gmail.com', 5454544, 'default', 'morning', true);
 }
