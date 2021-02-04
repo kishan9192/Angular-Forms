@@ -1,0 +1,25 @@
+<h1 class = "app-title"> To do list</h1>
+<hr>
+
+
+<div class="container">
+  
+  <!-- if anybody instead of hitting the button, hits enter, they should be able to enter the task -->
+  <input type = "text" class = "input-text" 
+         placeholder="Enter task" 
+         (keyup.enter) = "additem()" 
+         [(ngModel)] = "taskvalue" />
+  <button class = "add-btn" (click) = "additem()">Add Task</button>
+
+  <div class="list">
+    <ul>
+      <li *ngFor = "let i of list">
+        <input type = "checkbox" name = "isDone" 
+          [(ngModel)] = "i.isdone"
+        />
+        {{i.value}}
+        <button class = "btn" (click) = "deleteitem(i.id)"> Delete </button>
+      </li>
+    </ul>
+  </div>
+</div>
